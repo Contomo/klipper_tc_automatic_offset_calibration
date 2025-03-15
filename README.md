@@ -98,3 +98,22 @@ T0 is heated up, it will locate the probe and get a baseline to test the other t
 up to the probing temperature and the probing will begin. At the end of the probing, if the printer is not printing, the tools will be
 cooled down. If the offset calibrations are run during a print_start, then the tools will be left at 150C and it is expected that the
 print_start will heat them to printing temperatures at the correct time.
+
+## Running TC_ADJUST_OFFSET
+If during a print, you notice that an offset is not quite correct, you can adjust the offset while printing. This will adjust and save
+the offset. For instance, if you notice that the Y offset for tool 3 is slightly too far to the right of where it should be, run the
+following in the console:
+```
+TC_ADJUST_OFFSET TOOL=3 AXIS=Y AMOUNT=-0.10
+```
+This will shift the Y offset towards the left by 0.10mm. If the tool is currently printing, the offset will be adjusted immediately.
+
+## G-code Offset Adjustment tips:
+
+<li>A good rule I use to remember how to adjust the offsets, a positive number moves the offset towards the axis maximum, a negative number
+moves the offset towards the axis minimum.</li>
+<li>I recommend adjusting in 0.1 mm increments for X/Y to start, you can do this repeatedly in the Klipper console by pressing the up arrow. I
+generally do not adjust X or Y under 0.050 increments.</li>
+<li>I use increments of 0.05mm or 0.025mm to start when adjusting the gcode offset for Z. I generally don't adjust Z under 0.010 increments. I
+also do not usually adjust Z after the first layer.</li>
+<li>If you get too far off and cannot get the adjustments back into line; clean the nozzle then re-run the offset calibration for that tool.</li>
