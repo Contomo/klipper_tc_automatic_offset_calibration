@@ -101,7 +101,7 @@ print_start will heat them to printing temperatures at the correct time.
 
 ## Running TC_ADJUST_OFFSET
 If during a print, you notice that an offset is not quite correct, you can adjust the offset while printing. This will adjust and save
-the offset. For instance, if you notice that the Y offset for tool 3 is slightly too far to the right of where it should be, run the
+the offset. For instance, if you notice that the Y offset for tool 3 is slightly too far to the rear of where it should be, run the
 following in the console:
 ```
 TC_ADJUST_OFFSET TOOL=3 AXIS=Y AMOUNT=-0.10
