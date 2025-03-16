@@ -106,7 +106,7 @@ following in the console:
 ```
 TC_ADJUST_OFFSET TOOL=3 AXIS=Y AMOUNT=-0.10
 ```
-This will shift the Y offset towards the left by 0.10mm. If the tool is currently printing, the offset will be adjusted immediately.
+This will shift the Y offset towards the front by 0.10mm. If the tool is currently printing, the offset will be adjusted immediately.
 
 ## G-code Offset Adjustment tips:
 
