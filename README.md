@@ -33,6 +33,10 @@ t1_offset_z = 0.0
 t2_offset_x = 0.0
 t2_offset_y = 0.0
 t2_offset_z = 0.0
+##########################optional
+t0_offset_z_probe = 0.0
+t1_offset_z_probe = 0.0
+t2_offset_z_probe = 0.0
 ```
 
 ## Tool Head cfg file Modifications:
